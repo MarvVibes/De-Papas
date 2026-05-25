@@ -8627,5 +8627,32 @@ body:not(.light-theme) .site-header.scrolled {
     }
 }
 
+/* Desktop-only: High contrast visibility for header content when static (unscrolled) */
+@media (min-width: 1025px) {
+    .site-header:not(.scrolled) .nav-item,
+    .site-header:not(.scrolled) .logo-title {
+        color: var(--brand-gold) !important;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+    }
+    
+    .site-header:not(.scrolled) .nav-item:hover {
+        color: var(--accent-hover) !important;
+        text-shadow: 0 1px 5px rgba(0, 0, 0, 0.45);
+    }
+    
+    .site-header:not(.scrolled) .btn-outline-nav {
+        color: var(--brand-gold) !important;
+        border-color: var(--brand-gold) !important;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .site-header:not(.scrolled) .btn-outline-nav:hover {
+        background-color: var(--brand-gold) !important;
+        color: #ffffff !important;
+        border-color: var(--brand-gold) !important;
+    }
+}
+
+
 
 
