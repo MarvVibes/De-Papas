@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Papas - Construction & Logistics Solutions</title>
+    <!-- Google Fonts: Outfit (headings) & Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="/main.js" defer></script>
+</head>
+<body class="light-theme">
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Logo Section -->
+            <a href="/" class="logo-link" id="logo">
+                <div class="logo-box">
+                    <!-- Stylized Brand Logo representing De Papas (Arch, Green Truck, Navy Buildings) -->
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
+                        <!-- Golden Arch -->
+                        <path d="M 4 21 C 4 10, 28 10, 28 21" stroke="#c79244" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                        <!-- Curved road curve underneath -->
+                        <path d="M 2 22.2 C 10 20.8, 22 20.8, 30 22.2" stroke="#1e2d3d" stroke-width="1.8" stroke-linecap="round"/>
+                        
+                        <!-- Dark Green Dump Truck on the left -->
+                        <!-- Truck bed (Green) -->
+                        <path d="M 4.5 16.5 H 11.5 V 21.5 H 4.5 Z" fill="#0b4c35"/>
+                        <!-- Truck Cabin (Green) -->
+                        <path d="M 12 21.5 V 17 C 12 16.5, 12.5 16.2, 13 16.2 H 15 L 16.2 19.5 V 21.5 Z" fill="#0b4c35"/>
+                        <!-- Wheels -->
+                        <circle cx="6.5" cy="22.2" r="1.2" fill="#ffffff" stroke="#0b4c35" stroke-width="0.8"/>
+                        <circle cx="10.5" cy="22.2" r="1.2" fill="#ffffff" stroke="#0b4c35" stroke-width="0.8"/>
+                        
+                        <!-- Dark Navy Buildings on the right -->
+                        <!-- Building 1 (Tall, angled roof) -->
+                        <path d="M 18 21.5 V 11.5 L 22.5 9 L 22.5 21.5 Z" fill="#1e2d3d"/>
+                        <!-- Building 2 (Shorter, flat roof) -->
+                        <rect x="23.5" y="13.5" width="5" height="8" rx="0.5" fill="#1e2d3d"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">DE PAPAS</span>
+                    <span class="logo-subtitle">GLOBAL VENTURES</span>
+                </div>
+            </a>
+
+            <!-- Navigation Menu -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-item">ABOUT US</a></li>
+                    <li><a href="#services" class="nav-item">SERVICES</a></li>
+                    <li><a href="#projects" class="nav-item">PROJECTS</a></li>
+                    <li><a href="#contact" class="nav-item">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <!-- Action Area -->
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle Theme">
+                    <!-- Sun Icon (Outline) -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="sun-icon">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <a href="#contact" class="btn btn-outline-nav" id="nav-contact-btn">CONTACT US</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content (Hero Section) -->
+    <main>
+        <section class="hero-section">
+            <!-- Background Video with Overlay -->
+            <div class="hero-background">
+                <video autoplay loop muted playsinline class="hero-video-bg">
+                    <source src="/construction_hero_bg.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+
+            <!-- CAD Dynamic Grid Overlay -->
+            <div class="cad-grid-container" id="cad-grid">
+                <svg viewBox="0 0 1920 1080" preserveAspectRatio="none" class="cad-grid-svg">
+                    <!-- Grid Lines -->
+                    <path class="cad-line" d="M 100,800 L 800,800" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+                    <path class="cad-line" d="M 800,800 L 900,900" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+                    <path class="cad-line" d="M 900,900 L 1400,900" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+                    
+                    <path class="cad-line" d="M 500,700 L 1100,700" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1" stroke-dasharray="4 4" />
+                    <path class="cad-line" d="M 1100,700 L 1250,850" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1" stroke-dasharray="4 4" />
+                    
+                    <path class="cad-line" d="M 1050,450 L 1350,450" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+                    
+                    <!-- Vertical Projection Lines -->
+                    <line class="cad-line" x1="800" y1="800" x2="800" y2="920" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" stroke-dasharray="2 2" />
+                    <line class="cad-line" x1="1250" y1="850" x2="1250" y2="950" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" stroke-dasharray="2 2" />
+                    <line class="cad-line" x1="1060" y1="360" x2="1060" y2="550" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" stroke-dasharray="2 2" />
+
+                    <!-- CAD Nodes (Pulsing Targets) -->
+                    <g class="cad-node" transform="translate(800, 800)">
+                        <circle r="4" fill="var(--accent)"></circle>
+                        <circle r="12" fill="none" stroke="var(--accent)" stroke-width="1" class="pulse-ring"></circle>
+                    </g>
+                    <g class="cad-node" transform="translate(900, 900)">
+                        <circle r="3" fill="var(--brand-gold)"></circle>
+                        <circle r="8" fill="none" stroke="var(--brand-gold)" stroke-width="1" class="pulse-ring" style="animation-delay: 1s;"></circle>
+                    </g>
+                    <g class="cad-node" transform="translate(1100, 700)">
+                        <circle r="3" fill="rgba(255, 255, 255, 0.4)"></circle>
+                    </g>
+                    <g class="cad-node" transform="translate(1250, 850)">
+                        <circle r="4" fill="var(--accent)"></circle>
+                        <circle r="12" fill="none" stroke="var(--accent)" stroke-width="1" class="pulse-ring" style="animation-delay: 0.5s;"></circle>
+                    </g>
+                    <g class="cad-node" transform="translate(1060, 450)">
+                        <circle r="3" fill="var(--brand-gold)"></circle>
+                        <circle r="8" fill="none" stroke="var(--brand-gold)" stroke-width="1" class="pulse-ring" style="animation-delay: 1.5s;"></circle>
+                    </g>
+
+                    <!-- CAD Dimension Labels -->
+                    <text x="1080" y="440" fill="rgba(255, 255, 255, 0.5)" font-size="12" font-family="'Courier New', monospace" letter-spacing="1">64.2 M</text>
+                    <text x="1210" y="910" fill="rgba(255, 255, 255, 0.5)" font-size="12" font-family="'Courier New', monospace" letter-spacing="1">32.8 M</text>
+                </svg>
+            </div>
+
+            <!-- Content Area Container -->
+            <div class="container hero-container">
+                
+                <!-- Left Side: Copy, Buttons, Partners -->
+                <div class="hero-left">
+                    <div class="hero-subtitle-container">
+                        <div class="subtitle-line"></div>
+                        <span class="hero-subtitle">CONSTRUCTION & LOGISTICS SOLUTIONS</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        CONSTRUCTING WITH<br>
+                        PRECISION.<br>
+                        DELIVERING WITH<br>
+                        CERTAINTY.
+                    </h1>
+
+                    <p class="hero-description">
+                        We build high-quality structures, manage construction projects with expert oversight, and supply premium materials. Count on us for top-grade resources and zero delivery delays.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/1234567890" target="_blank" class="btn btn-primary" id="consult-btn">
+                            <span>CONSULT WITH US</span>
+                            <div class="whatsapp-circle">
+                                <!-- WhatsApp Icon -->
+                                <svg viewBox="0 0 24 24" fill="currentColor" class="whatsapp-icon">
+                                    <path d="M12.031 6c-3.314 0-6 2.686-6 6 0 1.055.273 2.046.75 2.906l-.797 2.922 2.985-.781c.828.453 1.773.719 2.781.719 3.314 0 6-2.686 6-6 0-3.314-2.686-6-6-6zm3.516 8.414c-.141.398-.711.719-1.07.766-.32.039-.727.063-1.898-.422-1.492-.617-2.438-2.141-2.516-2.242-.078-.102-.633-.844-.633-1.609 0-.766.406-1.141.547-1.289.141-.148.313-.219.469-.219.117 0 .227.008.32.016.102.008.234-.039.367.281.141.344.477 1.164.516 1.25.039.086.063.188.008.305-.055.117-.086.188-.172.289-.086.102-.18.227-.258.313-.086.086-.18.18-.078.352.102.172.453.75.969 1.211.664.594 1.227.781 1.406.859.18.078.281.063.391-.055.109-.125.477-.555.602-.742.125-.188.258-.156.43-.094.172.063 1.094.516 1.281.609.188.094.313.141.359.219.047.078.047.453-.094.852z"/>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="#services" class="btn btn-secondary" id="services-btn">
+                            VIEW OUR SERVICES
+                        </a>
+                    </div>
+
+                    <!-- Trusted Partners Area -->
+                    <div class="partners-section">
+                        <span class="partners-title">TRUSTED BY INDUSTRY LEADERS</span>
+                        <div class="partners-logos">
+                            <!-- ISO 9001:2015 -->
+                            <div class="partner-logo logo-iso">
+                                <span class="logo-main">ISO</span>
+                                <span class="logo-sub">9001:2015</span>
+                            </div>
+                            
+                            <!-- OHSAS 18001 -->
+                            <div class="partner-logo logo-ohsas">
+                                <svg viewBox="0 0 100 40" fill="currentColor" class="partner-svg">
+                                    <circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
+                                    <text x="20" y="24" font-size="10" font-weight="bold" text-anchor="middle" font-family="'Outfit', sans-serif">OHSAS</text>
+                                    <text x="58" y="25" font-size="14" font-weight="bold" font-family="'Outfit', sans-serif">18001</text>
+                                </svg>
+                            </div>
+
+                            <!-- COR CERTIFIED -->
+                            <div class="partner-logo logo-cor">
+                                <span class="logo-main">COR</span>
+                                <span class="logo-sub">CERTIFIED</span>
+                            </div>
+
+                            <!-- PXI PMI -->
+                            <div class="partner-logo logo-pxi">
+                                <span class="logo-main">PX<span class="logo-dot">I</span></span>
+                                <div class="logo-pxi-text">
+                                    <span>Project</span>
+                                    <span>Management</span>
+                                    <span>Institute.</span>
+                                </div>
+                            </div>
+
+                            <!-- Hexagon S -->
+                            <div class="partner-logo logo-s">
+                                <svg viewBox="0 0 36 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="partner-s-svg">
+                                    <path d="M18 2L33.5885 11V29L18 38L2.41154 29V11L18 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <path d="M18 9C15 9 12 10.5 12 13.5C12 18 24 16 24 21C24 24.5 20 26.5 17 26.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                    <path d="M19 13.5C19 13.5 21.5 13.5 23 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M17 22C17 22 14.5 22 13 20.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <circle cx="18" cy="18" r="1.5" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Stats Panel (Glassmorphism) -->
+                <div class="hero-right">
+                    <div class="stats-card">
+                        <div class="card-header">
+                            <span class="card-header-title">OPERATIONAL QUALITY</span>
+                        </div>
+                        
+                        <div class="card-body">
+                            <!-- Stat Item 1 -->
+                            <div class="stat-item">
+                                <div class="stat-icon-wrapper">
+                                    <!-- Building Icon -->
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="stat-svg">
+                                        <rect x="2" y="22" width="20" height="2"></rect>
+                                        <path d="M4 22V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v18"></path>
+                                        <path d="M9 22V16h6v6"></path>
+                                        <path d="M8 6h2"></path>
+                                        <path d="M8 10h2"></path>
+                                        <path d="M14 6h2"></path>
+                                        <path d="M14 10h2"></path>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label">COMPLETED BUILDS</span>
+                                </div>
+                            </div>
+
+                            <div class="card-divider"></div>
+
+                            <!-- Stat Item 2 -->
+                            <div class="stat-item">
+                                <div class="stat-icon-wrapper">
+                                    <!-- Clock Icon -->
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="stat-svg">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-label">ON-TIME DELIVERY</span>
+                                </div>
+                            </div>
+
+                            <div class="card-divider"></div>
+
+                            <!-- Stat Item 3 -->
+                            <div class="stat-item">
+                                <div class="stat-icon-wrapper">
+                                    <!-- Truck Icon -->
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="stat-svg">
+                                        <rect x="1" y="3" width="15" height="13" rx="2" ry="2"></rect>
+                                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                        <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                        <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number">70+</span>
+                                    <span class="stat-label">TONS SUPPLIED</span>
+                                </div>
+                            </div>
+
+                            <div class="card-divider"></div>
+
+                            <!-- Rating Section -->
+                            <div class="rating-item">
+                                <div class="stars-row">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="star-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="star-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="star-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="star-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="star-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                </div>
+                                <span class="rating-label">TRUSTED & LICENSED COMPANY</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-section" id="about">
+            <div class="container about-container">
+                <!-- Two-Column Main Content -->
+                <div class="about-main">
+                    
+                    <!-- Left Side: Interactive Mockup Dashboard -->
+                    <div class="about-left">
+                        <div class="mockup-frame">
+                            <!-- Background Construction Image -->
+                            <img src="/about_construction_site.png" alt="Operations Mockup Background" class="mockup-bg-image">
+                            <div class="mockup-overlay"></div>
+                            
+                            <!-- Widget 1: Operations Overview (Control Panel) -->
+                            <div class="float-wrapper float-ops-wrap">
+                                <div class="widget widget-ops">
+                                    <div class="widget-header">
+                                        <span class="widget-subtitle">OPERATIONS OVERVIEW</span>
+                                    </div>
+                                    <ul class="ops-list">
+                                        <li class="ops-item active" data-op="planning">
+                                            <span class="ops-text">Project Planning</span>
+                                            <span class="ops-indicator"></span>
+                                        </li>
+                                        <li class="ops-item" data-op="logistics">
+                                            <span class="ops-text">Site Logistics</span>
+                                            <span class="ops-arrow">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                            </span>
+                                        </li>
+                                        <li class="ops-item" data-op="allocation">
+                                            <span class="ops-text">Resource Allocation</span>
+                                            <span class="ops-arrow">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                            </span>
+                                        </li>
+                                        <li class="ops-item" data-op="progress">
+                                            <span class="ops-text">Construction Progress</span>
+                                            <span class="ops-arrow">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                            </span>
+                                        </li>
+                                        <li class="ops-item" data-op="quality">
+                                            <span class="ops-text">Quality Assurance</span>
+                                            <span class="ops-arrow">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                            </span>
+                                        </li>
+                                        <li class="ops-item" data-op="delivery">
+                                            <span class="ops-text">On-Time Delivery</span>
+                                            <span class="ops-arrow">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-svg"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Widget 2: Project Status -->
+                            <div class="float-wrapper float-status-wrap">
+                                <div class="widget widget-status">
+                                    <div class="widget-header">
+                                        <span class="widget-subtitle">PROJECT STATUS</span>
+                                    </div>
+                                    <div class="status-body">
+                                        <span class="status-phase" id="state-phase">Phase 3 - Structural Work</span>
+                                        <div class="progress-bar-row">
+                                            <span class="status-percentage" id="state-percentage">68%</span>
+                                            <span class="percentage-label">COMPLETE</span>
+                                        </div>
+                                        <div class="progress-track">
+                                            <div class="progress-fill" id="state-progress-fill" style="width: 68%;"></div>
+                                        </div>
+                                        <div class="status-indicator">
+                                            <span class="indicator-dot blinking-green"></span>
+                                            <span class="indicator-text" id="state-status-label">On Track</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Widget 3: Logistics Tracking -->
+                            <div class="float-wrapper float-logistics-wrap">
+                                <div class="widget widget-logistics">
+                                    <div class="widget-header">
+                                        <span class="widget-subtitle">LOGISTICS TRACKING</span>
+                                    </div>
+                                    <div class="logistics-body">
+                                        <!-- Stylized Coordinate Map SVG -->
+                                        <div class="logistics-map-wrapper">
+                                            <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="logistics-map-svg">
+                                                <!-- Map Grid lines -->
+                                                <line x1="10" y1="20" x2="150" y2="20" stroke="rgba(255, 255, 255, 0.05)" stroke-width="0.5"/>
+                                                <line x1="10" y1="40" x2="150" y2="40" stroke="rgba(255, 255, 255, 0.05)" stroke-width="0.5"/>
+                                                <line x1="10" y1="60" x2="150" y2="60" stroke="rgba(255, 255, 255, 0.05)" stroke-width="0.5"/>
+                                                <line x1="10" y1="80" x2="150" y2="80" stroke="rgba(255, 255, 255, 0.05)" stroke-width="0.5"/>
+                                                <line x1="30" y1="10" x2="30" y2="90" stroke="rgba(255, 255, 255, 0.05)" stroke-width="0.5"/>
+                                                <line x1="60" y1="10" x2="60" y2="90" stroke="rgba(255, 255, 255, 0.05)" stroke-width="0.5"/>
+                                                <line x1="90" y1="10" x2="90" y2="90" stroke="rgba(255, 255, 255, 0.05)" stroke-width="0.5"/>
+                                                <line x1="120" y1="10" x2="120" y2="90" stroke="rgba(255, 255, 255, 0.05)" stroke-width="0.5"/>
+                                                
+                                                <!-- Route Path -->
+                                                <path d="M 20,70 Q 50,20 80,60 T 140,40" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                                                <path id="active-route-line" d="M 20,70 Q 50,20 80,60 T 140,40" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="8 6" stroke-dashoffset="0"/>
+                                                
+                                                <!-- Key Nodes -->
+                                                <circle cx="20" cy="70" r="3" fill="var(--accent)"/>
+                                                <circle cx="80" cy="60" r="3" fill="var(--accent)"/>
+                                                <circle cx="140" cy="40" r="3" fill="var(--accent)"/>
+                                                
+                                                <!-- Moving vehicle node -->
+                                                <circle cx="80" cy="60" r="4" fill="#ffffff" class="blinking-node"/>
+                                            </svg>
+                                        </div>
+                                        <div class="logistics-metrics">
+                                            <span class="metrics-sub">On-Site Now</span>
+                                            <div class="metrics-row">
+                                                <span class="metrics-number" id="state-vehicles-count">24</span>
+                                                <span class="metrics-label">VEHICLES</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Widget 4: Resources On Site -->
+                            <div class="float-wrapper float-resources-wrap">
+                                <div class="widget widget-resources">
+                                    <div class="widget-header">
+                                        <span class="widget-subtitle">RESOURCES ON SITE</span>
+                                    </div>
+                                    <div class="resources-body">
+                                        <div class="resource-row">
+                                            <div class="res-item-left">
+                                                <span class="res-label" id="res-label-1">Machinery</span>
+                                            </div>
+                                            <span class="res-val" id="res-val-1">36</span>
+                                        </div>
+                                        <div class="res-divider"></div>
+                                        <div class="resource-row">
+                                            <div class="res-item-left">
+                                                <span class="res-label" id="res-label-2">Labour Force</span>
+                                            </div>
+                                            <span class="res-val" id="res-val-2">128</span>
+                                        </div>
+                                        <div class="res-divider"></div>
+                                        <div class="resource-row">
+                                            <div class="res-item-left">
+                                                <span class="res-label" id="res-label-3">Materials</span>
+                                            </div>
+                                            <span class="res-val" id="res-val-3">250+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side: Content & Counters -->
+                    <div class="about-right">
+                        <div class="about-subtitle-container">
+                            <div class="subtitle-line"></div>
+                            <span class="about-subtitle">ABOUT DE PAPAS</span>
+                        </div>
+                        
+                        <h2 class="about-title">
+                            Built with operational<br>
+                            discipline and engineered<br>
+                            for reliable execution.
+                        </h2>
+                        
+                        <div class="about-description">
+                            <p>
+                                At De Papas Global Ventures, we combine deep industry expertise with advanced project management and logistics systems to deliver construction projects with precision and reliability.
+                            </p>
+                            <p>
+                                From planning to delivery, every process is controlled, every detail is managed, and every commitment is honored.
+                            </p>
+                        </div>
+                        
+
+                        <!-- CTA Explore Process Button -->
+                        <a href="#process" class="about-cta-btn">
+                            <span>EXPLORE OUR PROCESS</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cta-arrow-svg">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <!-- Bottom Values Row -->
+                <div class="about-features-row">
+                    <!-- Feature 1 -->
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feature-svg">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="feature-text-block">
+                            <span class="feature-title">PRECISION PLANNING</span>
+                            <p class="feature-desc">Every project begins with detailed planning and accurate forecasting.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feature-svg">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-text-block">
+                            <span class="feature-title">EXPERT EXECUTION</span>
+                            <p class="feature-desc">Skilled teams, advanced equipment, and proven methodologies.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feature-svg">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-text-block">
+                            <span class="feature-title">QUALITY ASSURANCE</span>
+                            <p class="feature-desc">Rigorous quality control at every stage of construction.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 4 -->
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feature-svg">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="feature-text-block">
+                            <span class="feature-title">ON-TIME DELIVERY</span>
+                            <p class="feature-desc">We deliver on schedule without compromising on quality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="services-header">
+                    <div class="services-subtitle-wrap">
+                        <div class="subtitle-line"></div>
+                        <span class="services-subtitle">WHAT WE OFFER</span>
+                    </div>
+                    <h2 class="services-title">We Provide Services</h2>
+                    <p class="services-desc">
+                        De Papas Global Ventures supplies top-grade construction aggregates and executes precision engineering projects across Nigeria.
+                    </p>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="services-grid-modern">
+                    <!-- Card 1: Granite Supply -->
+                    <div class="service-card-modern">
+                        <div class="service-card-img-wrap">
+                            <img src="/service_granite.png" alt="Granite Supply Delivery" class="service-card-img">
+                        </div>
+                        <div class="service-card-content-modern">
+                            <div class="service-icon-modern-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="service-svg">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="service-card-title-modern">Granite Supply</h3>
+                            <p class="service-card-desc-modern">High-quality crushed granite in various aggregates (3/4", 1/2", stone dust) for solid structural foundations.</p>
+                            <a href="#contact" class="btn-service-action-modern">Get Start</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Sand Supply -->
+                    <div class="service-card-modern">
+                        <div class="service-card-img-wrap">
+                            <img src="/service_sand.png" alt="Sand Supply Delivery" class="service-card-img">
+                        </div>
+                        <div class="service-card-content-modern">
+                            <div class="service-icon-modern-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="service-svg">
+                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <h3 class="service-card-title-modern">Sand Supply</h3>
+                            <p class="service-card-desc-modern">Sharp, plaster, and filling sands sourced and delivered directly to your project site with zero logistical delays.</p>
+                            <a href="#contact" class="btn-service-action-modern">Get Start</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Stone Supply -->
+                    <div class="service-card-modern">
+                        <div class="service-card-img-wrap">
+                            <img src="/service_stone.png" alt="Stone Supply Delivery" class="service-card-img">
+                        </div>
+                        <div class="service-card-content-modern">
+                            <div class="service-icon-modern-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="service-svg">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                                    <line x1="15" y1="3" x2="15" y2="21"></line>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="3" y1="15" x2="21" y2="15"></line>
+                                </svg>
+                            </div>
+                            <h3 class="service-card-title-modern">Stone Supply</h3>
+                            <p class="service-card-desc-modern">Assorted building stones, hardcore aggregates, and boulders for foundations, retaining walls, and erosion control.</p>
+                            <a href="#contact" class="btn-service-action-modern">Get Start</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Building Construction (Active/Featured Card) -->
+                    <div class="service-card-modern active">
+                        <div class="service-card-img-wrap">
+                            <img src="/service_construction.png" alt="Building Construction Work" class="service-card-img">
+                        </div>
+                        <div class="service-card-content-modern">
+                            <div class="service-icon-modern-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="service-svg">
+                                    <rect x="2" y="22" width="20" height="2"></rect>
+                                    <path d="M4 22V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v18"></path>
+                                    <path d="M9 22V16h6v6"></path>
+                                    <path d="M8 6h2"></path>
+                                    <path d="M8 10h2"></path>
+                                    <path d="M14 6h2"></path>
+                                    <path d="M14 10h2"></path>
+                                </svg>
+                            </div>
+                            <h3 class="service-card-title-modern">Building Construction</h3>
+                            <p class="service-card-desc-modern">Turnkey construction services for civil, commercial, and residential infrastructure, managed by certified engineers.</p>
+                            <a href="#contact" class="btn-service-action-modern">Get Start</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Quality & Quantity Control -->
+                    <div class="service-card-modern">
+                        <div class="service-card-img-wrap">
+                            <img src="/service_quality.png" alt="Quality Control Inspection" class="service-card-img">
+                        </div>
+                        <div class="service-card-content-modern">
+                            <div class="service-icon-modern-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="service-svg">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="service-card-title-modern">Quality & Quantity Control</h3>
+                            <p class="service-card-desc-modern">Professional material audits, volume checks, and strict standard controls ensuring efficient resource utilization.</p>
+                            <a href="#contact" class="btn-service-action-modern">Get Start</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Site Management -->
+                    <div class="service-card-modern">
+                        <div class="service-card-img-wrap">
+                            <img src="/service_management.png" alt="Site Management Oversight" class="service-card-img">
+                        </div>
+                        <div class="service-card-content-modern">
+                            <div class="service-icon-modern-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="service-svg">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="service-card-title-modern">Site Management</h3>
+                            <p class="service-card-desc-modern">Comprehensive site operations, heavy machinery logistics, earthworks, and timeline enforcement for on-time handover.</p>
+                            <a href="#contact" class="btn-service-action-modern">Get Start</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Process Section -->
+        <section class="process-section" id="process">
+            <div class="container process-container">
+
+                <!-- Header Row -->
+                <div class="process-header">
+                    <div class="process-header-left">
+                        <div class="process-subtitle-container">
+                            <div class="subtitle-line"></div>
+                            <span class="process-subtitle">OUR PROCESS</span>
+                        </div>
+                        <h2 class="process-title">
+                            Structured systems.<br>
+                            Reliable execution.
+                        </h2>
+                    </div>
+                    <p class="process-header-desc">
+                        Every project moves through a carefully coordinated operational workflow designed for efficiency, safety and precision delivery.
+                    </p>
+                </div>
+
+                <!-- Process Console Grid -->
+                <div class="process-console-grid">
+                    <!-- Card 1 (Top Left) -->
+                    <div class="process-card active" data-step="1" id="p-card-1">
+                        <div class="process-card-accent"></div>
+                        <div class="process-card-header">
+                            <span class="process-card-num">01</span>
+                            <span class="process-status-tag active">ACTIVE</span>
+                        </div>
+                        <h3 class="process-card-title">Consultation</h3>
+                        <p class="process-card-desc">Understanding project scope, requirements and key objectives through in-depth client alignment.</p>
+                        <div class="process-card-progress-track">
+                            <div class="process-card-progress-bar" id="p-bar-1"></div>
+                        </div>
+                    </div>
+
+                    <!-- Central Monitor Screen Display -->
+                    <div class="process-console-monitor" id="process-monitor">
+                        <!-- Bezel headers / metadata -->
+                        <div class="monitor-bezel-header">
+                            <div class="bezel-badge">
+                                <span class="pulse-indicator red"></span>
+                                <span class="bezel-system-title">DE PAPAS OPS DISP</span>
+                            </div>
+                            <div class="bezel-stats">
+                                <span id="monitor-coords">LAT: 06.4524° N | LNG: 003.3792° E</span>
+                                <span class="bezel-divider">|</span>
+                                <span id="monitor-status-text">CYCLE ACTIVE</span>
+                            </div>
+                        </div>
+
+                        <!-- Visual Canvas container -->
+                        <div class="monitor-canvas-container">
+                            <!-- Overlay graphics -->
+                            <div class="monitor-hud-overlay">
+                                <div class="hud-corner top-left"></div>
+                                <div class="hud-corner top-right"></div>
+                                <div class="hud-corner bottom-left"></div>
+                                <div class="hud-corner bottom-right"></div>
+                                <div class="hud-crosshair"></div>
+                                <div class="hud-scanline"></div>
+                                <div class="hud-telemetry-panel">
+                                    <div class="hud-row">
+                                        <span class="hud-label">ELEVATION:</span>
+                                        <span class="hud-value" id="hud-elev-val">24.5 m</span>
+                                    </div>
+                                    <div class="hud-row">
+                                        <span class="hud-label">CREW COUNT:</span>
+                                        <span class="hud-value" id="hud-crew-val">12 Active</span>
+                                    </div>
+                                    <div class="hud-row">
+                                        <span class="hud-label">SIGNAL:</span>
+                                        <span class="hud-value color-green" id="hud-signal-val">98% SECURE</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Visual slides (fading) -->
+                            <div class="monitor-slide active" data-slide="1">
+                                <img src="/process_consultation.png" alt="Consultation Step" class="monitor-img">
+                            </div>
+                            <div class="monitor-slide" data-slide="2">
+                                <img src="/process_planning.png" alt="Planning & Logistics Step" class="monitor-img">
+                            </div>
+                            <div class="monitor-slide" data-slide="3">
+                                <img src="/process_preparation.png" alt="Site Prep Step" class="monitor-img">
+                            </div>
+                            <div class="monitor-slide" data-slide="4">
+                                <img src="/process_construction.png" alt="Construction Execution Step" class="monitor-img">
+                            </div>
+                            <div class="monitor-slide" data-slide="5">
+                                <img src="/process_completion.png" alt="Completion & Handover Step" class="monitor-img">
+                            </div>
+                        </div>
+
+                        <!-- Lower telemetry display log -->
+                        <div class="monitor-diagnostics-bar">
+                            <div class="diagnostics-label">LIVE SYSTEM TELEMETRY LOG:</div>
+                            <div class="diagnostics-log-window">
+                                <div id="diag-line-1" class="diag-line">&gt; INITIALIZING CONSOLE MONITOR STATUS... ONLINE</div>
+                                <div id="diag-line-2" class="diag-line">&gt; STAGE 01: CONSULTATION PROCESS SELECTED</div>
+                                <div id="diag-line-3" class="diag-line">&gt; RETRIEVING SITE A SURVEY REPORT AND SCOPE BLUEPRINTS</div>
+                            </div>
+                        </div>
+
+                        <!-- Manual play pause toggle -->
+                        <button class="monitor-cycle-control" id="cycle-play-pause-btn" aria-label="Pause Auto-advance">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="control-svg play-icon" style="display:none;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="control-svg pause-icon"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                            <span class="control-text">PAUSE WALKTHROUGH</span>
+                        </button>
+                    </div>
+
+                    <!-- Card 2 (Top Right) -->
+                    <div class="process-card" data-step="2" id="p-card-2">
+                        <div class="process-card-accent"></div>
+                        <div class="process-card-header">
+                            <span class="process-card-num">02</span>
+                            <span class="process-status-tag">QUEUED</span>
+                        </div>
+                        <h3 class="process-card-title">Planning & Logistics</h3>
+                        <p class="process-card-desc">Detailed scheduling, material procurement, resource allocation, and logistics planning.</p>
+                        <div class="process-card-progress-track">
+                            <div class="process-card-progress-bar" id="p-bar-2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 (Middle Left) -->
+                    <div class="process-card" data-step="3" id="p-card-3">
+                        <div class="process-card-accent"></div>
+                        <div class="process-card-header">
+                            <span class="process-card-num">03</span>
+                            <span class="process-status-tag">QUEUED</span>
+                        </div>
+                        <h3 class="process-card-title">Site Preparation</h3>
+                        <p class="process-card-desc">Site mobilization, surveying, grading, stabilization, and establishing initial temporary infrastructure.</p>
+                        <div class="process-card-progress-track">
+                            <div class="process-card-progress-bar" id="p-bar-3"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 (Middle Right) -->
+                    <div class="process-card" data-step="4" id="p-card-4">
+                        <div class="process-card-accent"></div>
+                        <div class="process-card-header">
+                            <span class="process-card-num">04</span>
+                            <span class="process-status-tag">QUEUED</span>
+                        </div>
+                        <h3 class="process-card-title">Construction Execution</h3>
+                        <p class="process-card-desc">Precision structural building, continuous inspections, site management, and real-time monitoring.</p>
+                        <div class="process-card-progress-track">
+                            <div class="process-card-progress-bar" id="p-bar-4"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 (Bottom Center) -->
+                    <div class="process-card" data-step="5" id="p-card-5">
+                        <div class="process-card-accent"></div>
+                        <div class="process-card-header">
+                            <span class="process-card-num">05</span>
+                            <span class="process-status-tag">QUEUED</span>
+                        </div>
+                        <h3 class="process-card-title">Handover & QA</h3>
+                        <p class="process-card-desc">Final architectural quality audits, detailed safety testing, customer walkthrough, and seamless handover.</p>
+                        <div class="process-card-progress-track">
+                            <div class="process-card-progress-bar" id="p-bar-5"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horizontal stats row -->
+                <div class="process-horizontal-stats">
+                    <div class="pstat-item">
+                        <div class="pstat-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="pstat-svg">
+                                <rect x="3" y="12" width="4" height="8" rx="1"></rect>
+                                <rect x="10" y="8" width="4" height="12" rx="1"></rect>
+                                <rect x="17" y="4" width="4" height="16" rx="1"></rect>
+                            </svg>
+                        </div>
+                        <div class="pstat-data">
+                            <span class="pstat-number">98%</span>
+                            <span class="pstat-label">Projects Delivered<br>On-Time</span>
+                        </div>
+                    </div>
+
+                    <div class="pstat-item">
+                        <div class="pstat-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="pstat-svg">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </div>
+                        <div class="pstat-data">
+                            <span class="pstat-number">100%</span>
+                            <span class="pstat-label">Quality & Safety<br>Commitment</span>
+                        </div>
+                    </div>
+
+                    <div class="pstat-item">
+                        <div class="pstat-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="pstat-svg">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="pstat-data">
+                            <span class="pstat-number">150+</span>
+                            <span class="pstat-label">Skilled Professionals<br>& Operators</span>
+                        </div>
+                    </div>
+
+                    <div class="pstat-item">
+                        <div class="pstat-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="pstat-svg">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="pstat-data">
+                            <span class="pstat-number">24/7</span>
+                            <span class="pstat-label">On-Site Operations<br>& Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Project Feed Bar -->
+                <div class="live-feed-bar">
+                    <span class="feed-dot"></span>
+                    <span class="feed-label">LIVE PROJECT FEED</span>
+                    <div class="feed-divider"></div>
+                    <span class="feed-text" id="live-feed-text">Site A - Foundation Work In Progress</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="projects-section" id="projects">
+            <div class="container projects-container">
+                
+                <!-- Section Header -->
+                <div class="projects-header">
+                    <div class="projects-header-left">
+                        <div class="projects-subtitle-container">
+                            <div class="subtitle-line"></div>
+                            <span class="projects-subtitle">FEATURED PROJECTS</span>
+                        </div>
+                        <h2 class="projects-title">
+                            Infrastructure built<br>
+                            through disciplined execution.
+                        </h2>
+                    </div>
+                    <p class="projects-header-desc">
+                        From complex construction to end-to-end logistics, we deliver projects with precision, safety, and operational excellence. On time, every time.
+                    </p>
+                </div>
+
+                <!-- Projects Stack -->
+                <div class="projects-stack">
+                    
+                    <!-- Project 01: Commercial Complex -->
+                    <div class="project-card-layout visual-left" id="proj-card-1">
+                        <!-- Left Column: Visual Before/After Visualizer -->
+                        <div class="project-visual-wrapper">
+                            <!-- HUD Reticle Corner Brackets -->
+                            <div class="hud-corner top-left"></div>
+                            <div class="hud-corner top-right"></div>
+                            <div class="hud-corner bottom-left"></div>
+                            <div class="hud-corner bottom-right"></div>
+
+                            <div class="before-after-slider" data-project="1">
+                                <!-- Telemetry Laser Scanner -->
+                                <div class="scan-laser"></div>
+                                <!-- Before layer -->
+                                <div class="slider-layer layer-before">
+                                    <img src="/project1_before.png" alt="Commercial Complex - Excavation and Foundation" class="slider-img">
+                                    <span class="slider-badge badge-before">BEFORE CONSTRUCTION</span>
+                                </div>
+                                <!-- After layer -->
+                                <div class="slider-layer layer-after">
+                                    <img src="/project1_after.png" alt="Completed Glass Commercial Complex" class="slider-img">
+                                    <span class="slider-badge badge-after">COMPLETED INFRASTRUCTURE</span>
+                                </div>
+                                <!-- Drag handles -->
+                                <div class="slider-divider">
+                                    <div class="slider-handle-bar"></div>
+                                    <div class="slider-handle-button">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="slider-arrows">
+                                            <polyline points="7 16 3 12 7 8"></polyline>
+                                            <polyline points="17 8 21 12 17 16"></polyline>
+                                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating HUD telemetries absolute overlays -->
+                            <!-- Project index badge -->
+                            <div class="float-hud hud-num-box">01</div>
+                            <!-- Left Info Widget -->
+                            <div class="float-hud hud-info-panel-left animate-float-delay-1">
+                                <div class="hud-panel-row">
+                                    <span class="hud-panel-dot blink-yellow"></span>
+                                    <span class="hud-panel-label">STATUS:</span>
+                                    <span class="hud-panel-value" id="hud-p1-status">Completed</span>
+                                </div>
+                                <div class="hud-panel-divider"></div>
+                                <div class="hud-panel-row">
+                                    <span class="hud-panel-label">LOCATION:</span>
+                                    <span class="hud-panel-value">Port Harcourt, Nigeria</span>
+                                </div>
+                                <div class="hud-panel-divider"></div>
+                                <div class="hud-panel-row">
+                                    <span class="hud-panel-label">TYPE:</span>
+                                    <span class="hud-panel-value">Commercial Infrastructure</span>
+                                </div>
+                            </div>
+                            <!-- Right Progress Widget -->
+                            <div class="float-hud hud-info-panel-right animate-float-delay-2">
+                                <span class="hud-panel-label">STRUCTURAL PROGRESS</span>
+                                <div class="hud-panel-progress-row">
+                                    <span class="hud-panel-progress-value" id="hud-p1-progress">100%</span>
+                                    <div class="hud-panel-progress-track">
+                                        <div class="hud-panel-progress-fill" id="hud-p1-progress-bar" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Project Copy details -->
+                        <div class="project-info-wrapper">
+                            <h3 class="project-name">Commercial Complex Development</h3>
+                            <span class="project-location-label">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="location-pin-svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Port Harcourt, Rivers State
+                            </span>
+                            
+                            <p class="project-description">
+                                A multi-story commercial complex featuring office spaces, retail units, and modern facilities built with advanced engineering and premium materials.
+                            </p>
+
+                            <!-- Challenge/Solution grid lists -->
+                            <div class="project-goals-list">
+                                <div class="goal-item">
+                                    <div class="goal-icon-wrap challenge">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                    </div>
+                                    <div class="goal-texts">
+                                        <span class="goal-title">THE CHALLENGE</span>
+                                        <p class="goal-desc">Deliver a modern commercial facility within a tight urban environment.</p>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="goal-icon-wrap solution">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                                    </div>
+                                    <div class="goal-texts">
+                                        <span class="goal-title">OUR SOLUTION</span>
+                                        <p class="goal-desc">Advanced planning, efficient logistics, and precision-driven execution.</p>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="goal-icon-wrap result">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                    </div>
+                                    <div class="goal-texts">
+                                        <span class="goal-title">THE RESULT</span>
+                                        <p class="goal-desc">Project delivered on time with zero safety incidents and exceptional quality.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-bottom-divider"></div>
+
+                            <!-- Project Stats -->
+                            <div class="project-stats-row">
+                                <div class="p-stat-box">
+                                    <span class="p-stat-value">12</span>
+                                    <span class="p-stat-label">MONTHS DELIVERY</span>
+                                </div>
+                                <div class="p-stat-box">
+                                    <span class="p-stat-value">150+</span>
+                                    <span class="p-stat-label">WORKFORCE DEPLOYED</span>
+                                </div>
+                                <div class="p-stat-box">
+                                    <span class="p-stat-value">100%</span>
+                                    <span class="p-stat-label">QUALITY COMPLIANCE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 02: Industrial Facility -->
+                    <div class="project-card-layout visual-right" id="proj-card-2">
+                        <!-- Left Column: Project Copy details -->
+                        <div class="project-info-wrapper">
+                            <h3 class="project-name">Industrial Facility Construction</h3>
+                            <span class="project-location-label">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="location-pin-svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Onne, Rivers State
+                            </span>
+                            
+                            <p class="project-description">
+                                Design and construction of a large-scale industrial facility including warehouses, processing units, and administrative buildings with full infrastructure.
+                            </p>
+
+                            <!-- Challenge/Solution grid lists -->
+                            <div class="project-goals-list">
+                                <div class="goal-item">
+                                    <div class="goal-icon-wrap challenge">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                    </div>
+                                    <div class="goal-texts">
+                                        <span class="goal-title">THE CHALLENGE</span>
+                                        <p class="goal-desc">Complex industrial requirements with strict safety and compliance standards.</p>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="goal-icon-wrap solution">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                                    </div>
+                                    <div class="goal-texts">
+                                        <span class="goal-title">OUR SOLUTION</span>
+                                        <p class="goal-desc">Integrated logistics, expert teams, and high-grade material handling.</p>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="goal-icon-wrap result">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                    </div>
+                                    <div class="goal-texts">
+                                        <span class="goal-title">THE RESULT</span>
+                                        <p class="goal-desc">Fully operational facility delivered ahead of schedule.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-bottom-divider"></div>
+
+                            <!-- Project Stats -->
+                            <div class="project-stats-row">
+                                <div class="p-stat-box">
+                                    <span class="p-stat-value">18</span>
+                                    <span class="p-stat-label">MONTHS DELIVERY</span>
+                                </div>
+                                <div class="p-stat-box">
+                                    <span class="p-stat-value">200+</span>
+                                    <span class="p-stat-label">WORKFORCE DEPLOYED</span>
+                                </div>
+                                <div class="p-stat-box">
+                                    <span class="p-stat-value">100%</span>
+                                    <span class="p-stat-label">ON-TIME COMPLETION</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Visual Before/After Visualizer -->
+                        <div class="project-visual-wrapper">
+                            <!-- HUD Reticle Corner Brackets -->
+                            <div class="hud-corner top-left"></div>
+                            <div class="hud-corner top-right"></div>
+                            <div class="hud-corner bottom-left"></div>
+                            <div class="hud-corner bottom-right"></div>
+
+                            <div class="before-after-slider" data-project="2">
+                                <!-- Telemetry Laser Scanner -->
+                                <div class="scan-laser"></div>
+                                <!-- Before layer -->
+                                <div class="slider-layer layer-before">
+                                    <img src="/project2_before.png" alt="Industrial Site Prep - Early Grading" class="slider-img">
+                                    <span class="slider-badge badge-before">BEFORE CONSTRUCTION</span>
+                                </div>
+                                <!-- After layer -->
+                                <div class="slider-layer layer-after">
+                                    <img src="/project2_after.png" alt="Completed Industrial Facility Complex" class="slider-img">
+                                    <span class="slider-badge badge-after">COMPLETED INFRASTRUCTURE</span>
+                                </div>
+                                <!-- Drag handles -->
+                                <div class="slider-divider">
+                                    <div class="slider-handle-bar"></div>
+                                    <div class="slider-handle-button">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="slider-arrows">
+                                            <polyline points="7 16 3 12 7 8"></polyline>
+                                            <polyline points="17 8 21 12 17 16"></polyline>
+                                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating HUD telemetries absolute overlays -->
+                            <!-- Project index badge -->
+                            <div class="float-hud hud-num-box">02</div>
+                            
+                            <!-- Logistics Telemetry HUD Header Overlay -->
+                            <div class="float-hud hud-logistics-flow animate-float-delay-2" id="hud-p2-flow">
+                                <svg viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="logistics-path-svg">
+                                    <path d="M10,40 Q60,10 120,35 T230,20" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                                    <path id="active-p2-route" d="M10,40 Q60,10 120,35 T230,20" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="6 4" stroke-dashoffset="0"/>
+                                    <circle cx="10" cy="40" r="2.5" fill="var(--accent)"/>
+                                    <circle cx="120" cy="35" r="2.5" fill="var(--accent)"/>
+                                    <circle cx="230" cy="20" r="2.5" fill="var(--accent)"/>
+                                    <!-- Moving dot -->
+                                    <circle id="moving-p2-dot" cx="120" cy="35" r="3.5" fill="#ffffff" style="animation: pulseWhite 1.5s infinite;"/>
+                                </svg>
+                                <span class="hud-logistics-label">LOGISTICS FLOW</span>
+                            </div>
+
+                            <!-- Right Materials Widget -->
+                            <div class="float-hud hud-materials-panel animate-float-delay-1">
+                                <span class="hud-materials-title">MATERIALS HANDLED</span>
+                                <div class="materials-row">
+                                    <span class="mat-dot yellow"></span>
+                                    <span class="mat-label">Steel</span>
+                                    <span class="mat-val" id="mat-steel-val">2,450 Tons</span>
+                                </div>
+                                <div class="mat-divider"></div>
+                                <div class="materials-row">
+                                    <span class="mat-dot grey"></span>
+                                    <span class="mat-label">Concrete</span>
+                                    <span class="mat-val" id="mat-concrete-val">18,600 m³</span>
+                                </div>
+                                <div class="mat-divider"></div>
+                                <div class="materials-row">
+                                    <span class="mat-dot blue"></span>
+                                    <span class="mat-label">Aggregates</span>
+                                    <span class="mat-val" id="mat-aggregates-val">32,000 Tons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 03: Marine Jetty -->
+                    <div class="project-card-layout visual-left" id="proj-card-3">
+                        <!-- Left Column: Visual Before/After Visualizer -->
+                        <div class="project-visual-wrapper">
+                            <!-- HUD Reticle Corner Brackets -->
+                            <div class="hud-corner top-left"></div>
+                            <div class="hud-corner top-right"></div>
+                            <div class="hud-corner bottom-left"></div>
+                            <div class="hud-corner bottom-right"></div>
+
+                            <div class="before-after-slider" data-project="3">
+                                <!-- Telemetry Laser Scanner -->
+                                <div class="scan-laser"></div>
+                                <!-- Before layer -->
+                                <div class="slider-layer layer-before">
+                                    <img src="/project3_before.png" alt="Marine Jetty - Pile Driving Phase" class="slider-img">
+                                    <span class="slider-badge badge-before">BEFORE CONSTRUCTION</span>
+                                </div>
+                                <!-- After layer -->
+                                <div class="slider-layer layer-after">
+                                    <img src="/project3_after.png" alt="Completed Port Marine Infrastructure" class="slider-img">
+                                    <span class="slider-badge badge-after">COMPLETED INFRASTRUCTURE</span>
+                                </div>
+                                <!-- Drag handles -->
+                                <div class="slider-divider">
+                                    <div class="slider-handle-bar"></div>
+                                    <div class="slider-handle-button">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="slider-arrows">
+                                            <polyline points="7 16 3 12 7 8"></polyline>
+                                            <polyline points="17 8 21 12 17 16"></polyline>
+                                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating HUD telemetries absolute overlays -->
+                            <!-- Project index badge -->
+                            <div class="float-hud hud-num-box">03</div>
+                            
+                            <!-- Left bottom coordinates widget -->
+                            <div class="float-hud hud-coordinates-panel animate-float-delay-1">
+                                <span class="hud-panel-label">COORDINATES</span>
+                                <span class="hud-coords-value">4.8156° N, 7.0498° E</span>
+                            </div>
+
+                            <!-- Right Progress Widget -->
+                            <div class="float-hud hud-info-panel-right animate-float-delay-2">
+                                <span class="hud-panel-label">CONSTRUCTION PROGRESS</span>
+                                <div class="hud-panel-progress-row">
+                                    <span class="hud-panel-progress-value" id="hud-p3-progress">92%</span>
+                                    <div class="hud-panel-progress-track">
+                                        <div class="hud-panel-progress-fill" id="hud-p3-progress-bar" style="width: 92%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Project Copy details -->
+                        <div class="project-info-wrapper">
+                            <h3 class="project-name">Marine Jetty & Port Infrastructure</h3>
+                            <span class="project-location-label">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="location-pin-svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Calabar, Cross River State
+                            </span>
+                            
+                            <p class="project-description">
+                                Construction of a heavy-duty marine jetty designed for efficient cargo handling and long-term operational reliability.
+                            </p>
+
+                            <!-- Challenge/Solution grid lists -->
+                            <div class="project-goals-list">
+                                <div class="goal-item">
+                                    <div class="goal-icon-wrap challenge">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                    </div>
+                                    <div class="goal-texts">
+                                        <span class="goal-title">THE CHALLENGE</span>
+                                        <p class="goal-desc">Building a durable marine structure in challenging environmental conditions.</p>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="goal-icon-wrap solution">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                                    </div>
+                                    <div class="goal-texts">
+                                        <span class="goal-title">OUR SOLUTION</span>
+                                        <p class="goal-desc">Specialized marine engineering, equipment, and experienced crews.</p>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="goal-icon-wrap result">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                    </div>
+                                    <div class="goal-texts">
+                                        <span class="goal-title">THE RESULT</span>
+                                        <p class="goal-desc">Robust, high-capacity jetty delivered with superior durability.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-bottom-divider"></div>
+
+                            <!-- Project Stats -->
+                            <div class="project-stats-row">
+                                <div class="p-stat-box">
+                                    <span class="p-stat-value">10</span>
+                                    <span class="p-stat-label">MONTHS DELIVERY</span>
+                                </div>
+                                <div class="p-stat-box">
+                                    <span class="p-stat-value">120+</span>
+                                    <span class="p-stat-label">WORKFORCE DEPLOYED</span>
+                                </div>
+                                <div class="p-stat-box">
+                                    <span class="p-stat-value">100%</span>
+                                    <span class="p-stat-label">SAFETY RECORD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom CTA Project Banner -->
+                <div class="project-cta-banner">
+                    <div class="banner-left">
+                        <div class="banner-icon-wrap">
+                            <!-- Stylized Crane / Hook SVG -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="banner-svg">
+                                <path d="M3 22V2l18 4v2L9 6v16"/>
+                                <circle cx="16" cy="14" r="2"/>
+                                <path d="M16 16v4h-2a1 1 0 0 0-1 1"/>
+                            </svg>
+                        </div>
+                        <div class="banner-texts">
+                            <h4 class="banner-title">Have a project in mind?</h4>
+                            <p class="banner-subtitle">Let's build it with precision and deliver with certainty.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/1234567890" target="_blank" class="btn btn-primary banner-cta-btn" id="banner-projects-btn">
+                        <span>VIEW ALL PROJECTS</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="banner-btn-arrow">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Testimonials, Trust & Industry Authority Section -->
+        <!-- Testimonials Section -->
+        <section class="testimonials-section new-testimonials" id="testimonials">
+            <div class="container new-testimonials-container">
+                
+                <!-- Left Side: Header & Copy -->
+                <div class="nt-left">
+                    <h2 class="nt-title">Hear what our clients<br>have to say</h2>
+                    <p class="nt-desc">
+                        De Papas Global Ventures is committed to excellence. Our clients trust us to deliver complex construction and logistics operations with precision. Read what our partners say about our work.
+                    </p>
+                </div>
+                
+                <!-- Right Side: Interactive Cards -->
+                <div class="nt-right">
+                    <div class="nt-cards-wrapper" id="nt-cards-wrapper">
+                        <div class="nt-cards-track" id="nt-cards-track">
+                            <!-- Card 1 -->
+                            <div class="nt-card">
+                                <div class="nt-quote-mark">“</div>
+                                <div class="nt-avatar-wrap">
+                                    <img src="/client_headshot_1.png" alt="Engr. Tunde Adebayo" class="nt-avatar">
+                                </div>
+                                <h4 class="nt-name">Engr. Tunde Adebayo</h4>
+                                <span class="nt-role">Project Director, Chevron Expansion</span>
+                                <div class="nt-stars">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                </div>
+                                <p class="nt-review">
+                                    "De Papas Global Ventures delivered our warehouse expansion three weeks ahead of schedule. Their logistics fleet management was outstanding, keeping materials flowing with zero downtime."
+                                </p>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div class="nt-card">
+                                <div class="nt-quote-mark">“</div>
+                                <div class="nt-avatar-wrap">
+                                    <img src="/client_headshot_2.png" alt="Dr. Amina Yusuf" class="nt-avatar">
+                                </div>
+                                <h4 class="nt-name">Dr. Amina Yusuf</h4>
+                                <span class="nt-role">Principal Consultant, CoreArch Projects</span>
+                                <div class="nt-stars">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                </div>
+                                <p class="nt-review">
+                                    "De Papas combines architectural vision with practical execution. Their compliance with structural standards is top-tier and their logistics support was flawless throughout our partnership."
+                                </p>
+                            </div>
+                            
+                            <!-- Card 3 -->
+                            <div class="nt-card">
+                                <div class="nt-quote-mark">“</div>
+                                <div class="nt-avatar-wrap">
+                                    <img src="/client_headshot_1.png" alt="Chief Emeka Nwachukwu" class="nt-avatar">
+                                </div>
+                                <h4 class="nt-name">Chief Emeka Nwachukwu</h4>
+                                <span class="nt-role">CEO, Sahara Logistics</span>
+                                <div class="nt-stars">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                </div>
+                                <p class="nt-review">
+                                    "Their supply chain integrity is unparalleled. 10,000 tons of cement delivered to our site with zero logistical delays. The operations tracking kept us updated in real time."
+                                </p>
+                            </div>
+                            
+                            <!-- Card 4 -->
+                            <div class="nt-card">
+                                <div class="nt-quote-mark">“</div>
+                                <div class="nt-avatar-wrap">
+                                    <img src="/client_headshot_2.png" alt="Captain Robert Cole" class="nt-avatar">
+                                </div>
+                                <h4 class="nt-name">Captain Robert Cole</h4>
+                                <span class="nt-role">Port Operations Director, Onne Jetty</span>
+                                <div class="nt-stars">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="nt-star"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                </div>
+                                <p class="nt-review">
+                                    "The marine jetty construction in Calabar was a massive engineering hurdle due to soil instability. De Papas deployed state-of-the-art pile-driving technology and met all strict safety standards."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dynamic Slide Progress Bar -->
+                    <div class="nt-progress-container">
+                        <div class="nt-progress-bar" id="nt-progress-bar"></div>
+                    </div>
+
+                    <!-- Navigation and Indicators -->
+                    <div class="nt-controls-wrapper">
+                        <!-- Navigation Buttons -->
+                        <div class="nt-nav">
+                            <button class="nt-nav-btn prev" id="nt-prev" aria-label="Previous">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                            </button>
+                            <button class="nt-nav-btn next active" id="nt-next" aria-label="Next">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </button>
+                        </div>
+                        
+                        <!-- Pagination Dots -->
+                        <div class="nt-dots" id="nt-dots">
+                            <!-- JS will inject or highlight these -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ / Q&A Section -->
+        <section class="faq-section" id="faq">
+            <div class="container faq-container">
+                <!-- Left Side: Header & Subtitle -->
+                <div class="faq-left">
+                    <div class="faq-subtitle-container">
+                        <div class="subtitle-line"></div>
+                        <span class="faq-subtitle">FAQ</span>
+                    </div>
+                    <h2 class="faq-title">Frequently Asked<br>Questions</h2>
+                    <p class="faq-desc">
+                        Find answers to common questions about our construction management, material supply logistics, safety protocols, and project onboarding process.
+                    </p>
+                </div>
+                
+                <!-- Right Side: Accordion Questions -->
+                <div class="faq-right">
+                    <div class="faq-accordion">
+                        
+                        <!-- Question 1 -->
+                        <div class="faq-item active">
+                            <button class="faq-trigger" aria-expanded="true">
+                                <span class="faq-question">What services does De Papas Global Ventures specialize in?</span>
+                                <span class="faq-icon-wrap">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="faq-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </button>
+                            <div class="faq-content">
+                                <p class="faq-answer">
+                                    We specialize in general civil construction (commercial, industrial & residential builds), large-scale logistics and fleet management, and marine infrastructure development (including pile driving and jetty construction).
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span class="faq-question">Where do you supply materials, and what is your delivery guarantee?</span>
+                                <span class="faq-icon-wrap">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="faq-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </button>
+                            <div class="faq-content">
+                                <p class="faq-answer">
+                                    We operate nationwide from our fleet terminal in Onne and fabrication yard in Calabar. We supply high-grade materials (aggregates, concrete, and steel) with a 100% on-time delivery guarantee supported by real-time logistics tracking.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span class="faq-question">How do you ensure structural quality and safety compliance?</span>
+                                <span class="faq-icon-wrap">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="faq-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </button>
+                            <div class="faq-content">
+                                <p class="faq-answer">
+                                    All our projects are executed by certified COREN engineers and align with ISO 9001:2015 quality management standards. We conduct rigorous material quality audits and enforce a strict zero-accident safety policy on all sites.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span class="faq-question">Can you handle projects outside Abia and Rivers State?</span>
+                                <span class="faq-icon-wrap">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="faq-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </button>
+                            <div class="faq-content">
+                                <p class="faq-answer">
+                                    Yes. While our headquarters is located in Aba, Abia State, and our logistics hubs are in Rivers and Cross River states, our operational reach, material supply lines, and machinery deployment span across the entire country.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Question 5 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span class="faq-question">How can I request a quote or project consultation?</span>
+                                <span class="faq-icon-wrap">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="faq-icon"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </button>
+                            <div class="faq-content">
+                                <p class="faq-answer">
+                                    You can submit your project parameters directly through our interactive lead portal in the contact section below. Alternatively, you can use our direct email or telephone channels to speak with our project estimating team.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Lead Portal Section -->
+        <section class="contact-section-modern" id="contact">
+            <div class="container contact-container-modern">
+                <div class="contact-header-modern">
+                    <div class="subtitle-line"></div>
+                    <span class="contact-subtitle-modern">SECURE LEAD PORTAL & CONTACT</span>
+                    <h2 class="contact-title-modern">Initiate Your Project</h2>
+                    <p class="contact-desc-modern">Submit your parameters to connect with our estimating team or contact us directly.</p>
+                </div>
+                
+                <form id="lead-portal-form" class="contact-portal-grid">
+                    <!-- Left Column: Personal Information -->
+                    <div class="contact-card-modern animate-fade-in-left">
+                        <h3 class="card-title-modern">Personal / Corporate Information</h3>
+                        <div class="form-row-modern">
+                            <div class="form-group-modern">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" placeholder="Adrien" required>
+                            </div>
+                            <div class="form-group-modern">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" placeholder="Gervaix" required>
+                            </div>
+                        </div>
+                        <div class="form-group-modern">
+                            <label for="email-address">Email Address</label>
+                            <input type="email" id="email-address" placeholder="adrien.gervaix@gmail.com" required>
+                        </div>
+                        <div class="form-group-modern">
+                            <label for="street-address">Street Address</label>
+                            <input type="text" id="street-address" placeholder="284, Place de la bourse" required>
+                        </div>
+                        <div class="form-row-modern">
+                            <div class="form-group-modern">
+                                <label for="city">City</label>
+                                <input type="text" id="city" placeholder="Lille" required>
+                            </div>
+                            <div class="form-group-modern">
+                                <label for="country">Country</label>
+                                <div class="select-wrapper-modern">
+                                    <select id="country" required>
+                                        <option value="" disabled selected>Select country</option>
+                                        <option value="Nigeria">Nigeria</option>
+                                        <option value="France">France</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="United States">United States</option>
+                                    </select>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="select-arrow-svg"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group-modern">
+                            <label for="phone-number">Phone number</label>
+                            <div class="phone-input-wrapper-modern">
+                                <span class="phone-prefix-modern">+234</span>
+                                <input type="tel" id="phone-number" placeholder="803 123 4567" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Project Specifications & Delivery Selection -->
+                    <div class="contact-card-modern animate-fade-in-right">
+                        <h3 class="card-title-modern">Project Specifications</h3>
+                        
+                        <label class="section-label-modern">Select Operations Division</label>
+                        <div class="division-grid-modern">
+                            <!-- Card 1: Civil Division -->
+                            <div class="division-card-modern active" data-division="civil">
+                                <div class="division-card-header">
+                                    <span class="division-badge">CIVIL</span>
+                                    <span class="division-price">₦50M+</span>
+                                </div>
+                                <p class="division-desc">Civil builds, structural concrete, marine piling & road engineering.</p>
+                                <div class="division-indicator">Active Selection</div>
+                            </div>
+                            <!-- Card 2: Heavy Division -->
+                            <div class="division-card-modern" data-division="heavy">
+                                <div class="division-card-header">
+                                    <span class="division-badge">HEAVY</span>
+                                    <span class="division-price">₦5M+</span>
+                                </div>
+                                <p class="division-desc">Heavy machinery lease, logistics fleet haulage & material dispatch.</p>
+                                <div class="division-indicator">Select Division</div>
+                            </div>
+                        </div>
+                        <input type="hidden" id="selected-division" name="division" value="civil">
+                        
+                        <div class="checkbox-group-modern">
+                            <label class="checkbox-container-modern">
+                                <input type="checkbox" id="newsletter-check" checked>
+                                <span class="checkbox-checkmark-modern"></span>
+                                <span class="checkbox-label-text">Subscribe to project status alerts & fleet logs</span>
+                            </label>
+                            <label class="checkbox-container-modern">
+                                <input type="checkbox" id="survey-check">
+                                <span class="checkbox-checkmark-modern"></span>
+                                <span class="checkbox-label-text">Request preliminary site survey & feasibility audit</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" id="form-submit-btn-modern" class="btn-submit-modern">
+                            <span class="btn-text-modern">TRANSMIT SPECIFICATIONS</span>
+                            <span class="btn-spinner-modern"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Call to Action (CTA) Section -->
+        <section class="cta-section" id="cta">
+            <div class="container">
+                <div class="cta-container">
+                    <div class="cta-blueprint-grid"></div>
+                    <div class="cta-content">
+                        <div class="cta-subtitle-container">
+                            <div class="subtitle-line"></div>
+                            <span class="cta-subtitle">CONSISTENT ENGINEERING EXCELLENCE</span>
+                        </div>
+                        <h2 class="cta-title">We Build Something<br>New And Consistent.</h2>
+                        <p class="cta-desc">
+                            De Papas Global Ventures delivers premium construction solutions, structured project logistics, and marine infrastructure engineering. Partner with our team of COREN-certified experts to bring reliable precision to your next project.
+                        </p>
+                        <div class="cta-actions">
+                            <a href="#contact" class="btn btn-primary cta-btn">Contact Us</a>
+                            <a href="#services" class="btn btn-outline-light cta-btn">Our Service</a>
+                        </div>
+                    </div>
+                    <div class="cta-image-wrapper">
+                        <div class="cta-image-frame">
+                            <img src="cta_engineer.jpg" alt="De Papas Safety Engineer" class="cta-img">
+                            <div class="cta-image-decor"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="site-footer">
+            <div class="container footer-container">
+                <!-- Col 1: Brand & Contact -->
+                <div class="footer-column brand-col">
+                    <div class="footer-logo">
+                        <span class="footer-logo-text">DE PAPAS</span>
+                        <span class="footer-logo-tagline">GLOBAL VENTURES</span>
+                    </div>
+                    <p class="footer-about-text">
+                        Consistently delivering engineering excellence, quality materials, and reliable logistics across Nigeria.
+                    </p>
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Aba, Abia State (HQ)</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <span>info@depapas.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Granite Supply</a></li>
+                        <li><a href="#services">Sand Supply</a></li>
+                        <li><a href="#services">Stone Supply</a></li>
+                        <li><a href="#services">Building Construction</a></li>
+                        <li><a href="#services">Site Management</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Quick Links -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Lead Portal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Quality & Safety -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Quality Standards</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">ISO 9001:2015 Audit</a></li>
+                        <li><a href="#about">OHSAS 18001 Safety</a></li>
+                        <li><a href="#about">COREN Registration</a></li>
+                        <li><a href="#about">Feasibility Analysis</a></li>
+                        <li><a href="#about">Client Handover Logs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 5: Newsletter -->
+                <div class="footer-column newsletter-col">
+                    <h4 class="footer-title">Project Inquiries</h4>
+                    <p class="newsletter-text">Subscribe to our weekly dispatch schedule and project progress reports.</p>
+                    <form id="footer-newsletter-form" class="footer-newsletter-form">
+                        <div class="footer-input-wrap">
+                            <input type="text" id="newsletter-name" placeholder="Your Name" required>
+                        </div>
+                        <div class="footer-input-wrap">
+                            <input type="email" id="newsletter-email" placeholder="Your Email" required>
+                        </div>
+                        <button type="submit" class="btn-footer-subscribe">
+                            <span class="btn-text">SUBSCRIBE</span>
+                            <span class="btn-spinner"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="footer-bottom">
+                <div class="container footer-bottom-container">
+                    <span class="copyright-text">© 2026 De Papas Global Ventures. All Rights Reserved.</span>
+                    <span class="footer-website-link">www.depapasglobalventures.com</span>
+                    <div class="footer-social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-icon"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-icon"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-icon"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="social-icon"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+</body>
+</html>
