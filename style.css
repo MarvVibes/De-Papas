@@ -5,6 +5,7 @@
     /* Fonts */
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
+    --font-accent: 'Space Grotesk', sans-serif;
 
     /* Theme Variables - Dark Theme (Default Brand Navy Canvas) */
     --bg-main: #070c14;       /* Deep Brand Navy Blue (logo & shield base) */
@@ -137,6 +138,33 @@ a {
     padding-right: 40px;
 }
 
+/* Accent Font (Space Grotesk) Mapping */
+[class$="-subtitle"], 
+[class*="-subtitle "],
+.logo-subtitle,
+.nav-item,
+.btn,
+.btn-service-action-modern,
+.stat-number,
+.stat-label,
+.rating-label,
+.pstat-number,
+.pstat-label,
+.p-stat-number,
+.p-stat-label,
+.card-header-title,
+.widget-subtitle,
+.ops-text,
+.status-phase,
+.percentage-label,
+.indicator-text,
+.metrics-sub,
+.metrics-label,
+.res-label,
+.res-val {
+    font-family: var(--font-accent) !important;
+}
+
 /* ==========================================
    HEADER / NAVIGATION
    ========================================== */
@@ -204,9 +232,9 @@ a {
 }
 
 .logo-subtitle {
-    font-family: var(--font-heading);
+    font-family: var(--font-accent);
     font-weight: 600;
-    font-size: 0.55rem;
+    font-size: 0.68rem;
     letter-spacing: 1.5px;
     color: var(--logo-subtitle-color);
     margin-top: 2px;
@@ -225,8 +253,8 @@ a {
 }
 
 .nav-item {
-    font-family: var(--font-heading);
-    font-size: 0.85rem;
+    font-family: var(--font-accent);
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 1px;
     color: var(--text-primary);
@@ -290,7 +318,7 @@ a {
 
 /* Contact Button (Navbar) */
 .btn {
-    font-family: var(--font-heading);
+    font-family: var(--font-accent);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -6442,8 +6470,8 @@ body:not(.light-theme) .service-card-desc-modern {
     border: 1.5px solid rgba(216, 150, 53, 0.5);
     color: var(--accent) !important;
     border-radius: 8px;
-    font-family: var(--font-heading);
-    font-size: 0.88rem;
+    font-family: var(--font-accent);
+    font-size: 0.92rem;
     font-weight: 700;
     text-decoration: none;
     text-align: center;
@@ -7454,7 +7482,7 @@ section {
     }
 
     .container {
-        padding: 0 16px;
+        padding: 0 20px !important;
     }
 
     .services-header h2,
@@ -8233,6 +8261,134 @@ body:not(.light-theme) .site-header.scrolled {
     .footer-social-links {
         justify-content: center;
     }
+
+    /* ==========================================
+       ADDITIONAL MOBILE OVERRIDES (STRICTLY MOBILE-ONLY)
+       ========================================== */
+    
+    /* 1. Add 25px padding to the top of the hero */
+    .hero-section {
+        padding-top: 105px !important; /* increased from 80px by 25px */
+    }
+
+    /* 2. Reduce the height of the header */
+    .header-container {
+        padding: 8px 20px !important; /* reduced vertical padding to 8px */
+    }
+
+    /* 3. Increase font sizes of tiny texts to prevent AI look */
+    .logo-subtitle {
+        font-size: 0.65rem !important; /* from 0.48rem */
+        letter-spacing: 1px !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.85rem !important; /* from 0.68rem */
+    }
+
+    .hero-description {
+        font-size: 0.95rem !important; /* from 0.85rem */
+    }
+
+    .partners-title {
+        font-size: 0.8rem !important; /* from 0.72rem */
+    }
+
+    .stat-label,
+    .rating-label,
+    .card-header-title {
+        font-size: 0.78rem !important; /* from 0.65rem/0.72rem */
+    }
+
+    /* 4. Increase padding on mobile container margins */
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    
+    /* 5. Fix overlap & clutter in About Us dashboard mockup by making widgets static & stackable */
+    .mockup-frame {
+        aspect-ratio: auto !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        overflow: visible !important;
+        padding: 0 !important;
+        margin-top: 24px !important;
+    }
+    
+    .mockup-bg-image,
+    .mockup-overlay {
+        display: none !important;
+    }
+    
+    .float-wrapper {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        transform: none !important;
+        animation: none !important;
+    }
+    
+    .widget {
+        background: var(--glass-bg) !important;
+        border: 1px solid var(--glass-border) !important;
+        border-radius: 12px !important;
+        box-shadow: var(--card-shadow) !important;
+        padding: 16px !important;
+    }
+
+    .widget-subtitle {
+        font-size: 0.78rem !important;
+        letter-spacing: 1.2px !important;
+    }
+
+    .ops-text {
+        font-size: 0.85rem !important;
+    }
+    
+    .ops-list {
+        margin-top: 10px !important;
+        gap: 8px !important;
+    }
+    
+    .ops-item {
+        padding: 8px 12px !important;
+    }
+    
+    .status-phase {
+        font-size: 0.85rem !important;
+    }
+    
+    .status-percentage {
+        font-size: 1.4rem !important;
+    }
+    
+    .percentage-label,
+    .indicator-text {
+        font-size: 0.75rem !important;
+    }
+    
+    .logistics-map-wrapper {
+        height: 80px !important;
+    }
+    
+    .metrics-number {
+        font-size: 1.3rem !important;
+    }
+    
+    .metrics-label,
+    .metrics-sub {
+        font-size: 0.75rem !important;
+    }
+    
+    .res-label,
+    .res-val {
+        font-size: 0.85rem !important;
+    }
 }
 
 /* ==========================================================================
@@ -8241,9 +8397,9 @@ body:not(.light-theme) .site-header.scrolled {
 @media (max-width: 400px) {
 
     .container {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+     }
 
     .hero-title {
         font-size: 1.4rem !important;
