@@ -8277,20 +8277,41 @@ body:not(.light-theme) .site-header.scrolled {
         padding-bottom: 60px !important;
     }
 
-    /* 3. Reduce header height & force dark navy translucent background for perfect text contrast */
-    .site-header {
+    /* 3. Reduce header height & handle theme-based background and text visibility on scroll */
+    .site-header:not(.scrolled) {
         background-color: rgba(7, 12, 20, 0.95) !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
     }
 
-    .site-header .logo-title,
-    .site-header .mobile-menu-toggle,
-    .site-header .nav-item {
+    .site-header:not(.scrolled) .logo-title,
+    .site-header:not(.scrolled) .mobile-menu-toggle,
+    .site-header:not(.scrolled) .nav-item {
         color: #ffffff !important;
     }
 
-    .site-header .logo-subtitle {
+    .site-header:not(.scrolled) .logo-subtitle {
         color: var(--brand-gold) !important;
+    }
+
+    .site-header.scrolled {
+        background-color: var(--header-bg) !important;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08) !important;
+        border-bottom: 1px solid var(--header-border) !important;
+    }
+
+    body:not(.light-theme) .site-header.scrolled {
+        background-color: rgba(7, 12, 20, 0.97) !important;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .site-header.scrolled .logo-title,
+    .site-header.scrolled .mobile-menu-toggle,
+    .site-header.scrolled .nav-item {
+        color: var(--text-primary) !important;
+    }
+
+    .site-header.scrolled .logo-subtitle {
+        color: var(--logo-subtitle-color) !important;
     }
 
     .header-container {
@@ -8470,10 +8491,37 @@ body:not(.light-theme) .site-header.scrolled {
         display: none !important;
     }
 
-    /* 10. Increase padding on mobile container margins */
+    /* 10. Increase padding on mobile container margins & prevent form horizontal overflow */
     .container {
         padding-left: 20px !important;
         padding-right: 20px !important;
+    }
+
+    .contact-container-modern {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .contact-portal-grid,
+    .contact-card-modern,
+    .form-group-modern,
+    .form-row-modern {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .form-group-modern input,
+    .form-group-modern select,
+    .select-wrapper-modern,
+    .phone-input-wrapper-modern {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .contact-card-modern {
+        padding: 24px 16px !important; /* reduce padding so it fits well on tiny screens */
     }
 
     /* 11. Increase font sizes of specific small text elements */
