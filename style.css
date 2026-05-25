@@ -6928,6 +6928,12 @@ body:not(.light-theme) .testimonials-section .nt-project-badge {
     color: #718096;
 }
 
+.built-by {
+    color: var(--accent);
+    font-weight: 600;
+    margin-left: 4px;
+}
+
 .footer-website-link {
     font-family: var(--font-heading);
     font-weight: 600;
@@ -8542,6 +8548,35 @@ body:not(.light-theme) .site-header.scrolled {
     .rating-label,
     .card-header-title {
         font-size: 0.78rem !important;
+    }
+
+    /* 12. Display CTA image on mobile and style it properly so it stacks cleanly */
+    .cta-image-wrapper {
+        display: block !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 32px auto 0 auto !important; /* centered at the bottom of the CTA content */
+    }
+
+    .cta-image-frame {
+        width: 100% !important;
+        aspect-ratio: 1.15 !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4) !important;
+        border: 2px solid rgba(255, 255, 255, 0.1) !important;
+        position: relative !important;
+    }
+
+    .cta-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+    
+    .cta-image-decor {
+        display: none !important; /* hide extra decorative shapes on mobile to keep it clean */
     }
 }
 
