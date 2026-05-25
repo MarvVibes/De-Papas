@@ -8266,128 +8266,234 @@ body:not(.light-theme) .site-header.scrolled {
        ADDITIONAL MOBILE OVERRIDES (STRICTLY MOBILE-ONLY)
        ========================================== */
     
-    /* 1. Add 25px padding to the top of the hero */
+    /* 1. Set general mobile body font size */
+    body {
+        font-size: 0.95rem !important;
+    }
+
+    /* 2. Add more padding to the hero section (increased top/bottom space) */
     .hero-section {
-        padding-top: 105px !important; /* increased from 80px by 25px */
+        padding-top: 130px !important; 
+        padding-bottom: 60px !important;
     }
 
-    /* 2. Reduce the height of the header */
+    /* 3. Reduce header height & force dark navy translucent background for perfect text contrast */
+    .site-header {
+        background-color: rgba(7, 12, 20, 0.95) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+
+    .site-header .logo-title,
+    .site-header .mobile-menu-toggle,
+    .site-header .nav-item {
+        color: #ffffff !important;
+    }
+
+    .site-header .logo-subtitle {
+        color: var(--brand-gold) !important;
+    }
+
     .header-container {
-        padding: 8px 20px !important; /* reduced vertical padding to 8px */
+        padding: 8px 16px !important; /* reduced header padding */
     }
 
-    /* 3. Increase font sizes of tiny texts to prevent AI look */
-    .logo-subtitle {
-        font-size: 0.65rem !important; /* from 0.48rem */
-        letter-spacing: 1px !important;
+    /* 4. Reduce spacing of the hamburger toggle button */
+    .header-actions {
+        gap: 8px !important;
+    }
+
+    .mobile-menu-toggle {
+        padding: 4px !important;
+    }
+
+    /* 5. Increase hero heading size, flow it naturally without line breaks, and reduce description text size */
+    .hero-title {
+        font-size: 2.05rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 16px !important;
     }
     
-    .hero-subtitle {
-        font-size: 0.85rem !important; /* from 0.68rem */
+    .hero-title br {
+        display: none !important;
     }
 
     .hero-description {
-        font-size: 0.95rem !important; /* from 0.85rem */
+        font-size: 0.88rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 24px !important;
+        opacity: 0.88 !important;
     }
 
-    .partners-title {
-        font-size: 0.8rem !important; /* from 0.72rem */
-    }
-
-    .stat-label,
-    .rating-label,
-    .card-header-title {
-        font-size: 0.78rem !important; /* from 0.65rem/0.72rem */
-    }
-
-    /* 4. Increase padding on mobile container margins */
-    .container {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-    }
-    
-    /* 5. Fix overlap & clutter in About Us dashboard mockup by making widgets static & stackable */
-    .mockup-frame {
-        aspect-ratio: auto !important;
-        background: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
+    /* 6. Reduce length of hero buttons & format them as a 2-column horizontal row */
+    .hero-buttons {
         display: flex !important;
-        flex-direction: column !important;
-        gap: 16px !important;
-        overflow: visible !important;
-        padding: 0 !important;
+        flex-direction: row !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 8px !important;
+        margin-top: 20px !important;
+    }
+
+    .hero-buttons .btn {
+        flex: 1 !important;
+        width: auto !important;
+        min-width: 0 !important;
+        padding: 10px 4px !important; /* reduced button padding */
+        font-size: 0.74rem !important;
+        white-space: nowrap !important;
+        justify-content: center !important;
+    }
+
+    /* 7. Reduce size and padding of all buttons across the site on mobile */
+    .btn,
+    .btn-service-action-modern,
+    .about-cta-btn {
+        padding: 10px 16px !important;
+        font-size: 0.82rem !important;
+    }
+
+    /* 8. Restore the absolute layout structure of widgets inside the About Us mockup frame, but make it taller to prevent clashing/overlaps */
+    .mockup-frame {
+        aspect-ratio: 0.92 !important; /* taller vertical dimension */
+        background: #000000 !important;
+        border: 1px solid rgba(18, 19, 22, 0.08) !important;
+        border-radius: 20px !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
+        display: block !important;
+        position: relative !important;
+        overflow: hidden !important;
         margin-top: 24px !important;
     }
     
     .mockup-bg-image,
     .mockup-overlay {
-        display: none !important;
+        display: block !important;
     }
     
     .float-wrapper {
-        position: static !important;
-        width: 100% !important;
-        height: auto !important;
-        transform: none !important;
-        animation: none !important;
+        position: absolute !important;
     }
     
     .widget {
         background: var(--glass-bg) !important;
         border: 1px solid var(--glass-border) !important;
-        border-radius: 12px !important;
+        border-radius: 10px !important;
         box-shadow: var(--card-shadow) !important;
-        padding: 16px !important;
+        padding: 8px 10px !important;
     }
 
     .widget-subtitle {
-        font-size: 0.78rem !important;
+        font-size: 0.75rem !important;
         letter-spacing: 1.2px !important;
     }
 
     .ops-text {
-        font-size: 0.85rem !important;
+        font-size: 0.7rem !important;
     }
     
     .ops-list {
-        margin-top: 10px !important;
-        gap: 8px !important;
+        margin-top: 6px !important;
+        gap: 4px !important;
     }
     
     .ops-item {
-        padding: 8px 12px !important;
+        padding: 5px 6px !important;
+        gap: 6px !important;
     }
     
     .status-phase {
-        font-size: 0.85rem !important;
+        font-size: 0.68rem !important;
     }
     
     .status-percentage {
-        font-size: 1.4rem !important;
+        font-size: 1.15rem !important;
     }
     
     .percentage-label,
     .indicator-text {
-        font-size: 0.75rem !important;
+        font-size: 0.65rem !important;
     }
     
     .logistics-map-wrapper {
-        height: 80px !important;
+        height: 52px !important;
     }
     
     .metrics-number {
-        font-size: 1.3rem !important;
+        font-size: 1.1rem !important;
     }
     
     .metrics-label,
     .metrics-sub {
-        font-size: 0.75rem !important;
+        font-size: 0.62rem !important;
     }
     
     .res-label,
     .res-val {
+        font-size: 0.65rem !important;
+    }
+
+    .float-ops-wrap {
+        width: 44% !important;
+        left: 2% !important;
+        top: 3% !important;
+        bottom: 3% !important;
+        height: auto !important;
+    }
+
+    .float-status-wrap {
+        width: 50% !important;
+        right: 2% !important;
+        top: 3% !important;
+        height: auto !important;
+    }
+
+    .float-logistics-wrap {
+        width: 50% !important;
+        left: 48% !important;
+        bottom: 3% !important;
+        height: 42% !important;
+    }
+
+    .float-resources-wrap {
+        width: 44% !important;
+        left: 2% !important;
+        bottom: 3% !important;
+        height: 42% !important;
+    }
+
+    /* 9. Fix overlap in the Featured Projects Specification view by hiding overlay brackets/telemetry HUDs */
+    .float-hud,
+    .hud-info-panel-left,
+    .hud-info-panel-right,
+    .hud-num-box,
+    .hud-corner {
+        display: none !important;
+    }
+
+    /* 10. Increase padding on mobile container margins */
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    /* 11. Increase font sizes of specific small text elements */
+    .logo-subtitle {
+        font-size: 0.65rem !important;
+        letter-spacing: 1px !important;
+    }
+    
+    .hero-subtitle {
         font-size: 0.85rem !important;
+    }
+
+    .partners-title {
+        font-size: 0.8rem !important;
+    }
+
+    .stat-label,
+    .rating-label,
+    .card-header-title {
+        font-size: 0.78rem !important;
     }
 }
 
