@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
+    initMobileMenu();
+    initHeaderScroll();
+    initScrollReveal();
     initCadGridTelemetry();
     setupSmoothScrolling();
     initAboutTabs();
@@ -15,6 +18,91 @@ document.addEventListener('DOMContentLoaded', () => {
     initFooterNewsletter();
     printWelcomeConsole();
 });
+
+/**
+ * Mobile Hamburger Menu
+ */
+function initMobileMenu() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const nav = document.querySelector('.main-nav');
+    const header = document.querySelector('.site-header');
+    if (!btn || !nav) return;
+
+    // Close menu when a nav link is clicked
+    nav.querySelectorAll('.nav-item').forEach(link => {
+        link.addEventListener('click', () => {
+            btn.classList.remove('active');
+            nav.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        });
+    });
+
+    btn.addEventListener('click', () => {
+        const isOpen = nav.classList.contains('open');
+        if (isOpen) {
+            btn.classList.remove('active');
+            nav.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        } else {
+            btn.classList.add('active');
+            nav.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+        if (!header.contains(e.target) && nav.classList.contains('open')) {
+            btn.classList.remove('active');
+            nav.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+/**
+ * Header scroll effect - adds .scrolled class when user scrolls down
+ */
+function initHeaderScroll() {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+    const onScroll = () => {
+        if (window.scrollY > 60) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+}
+
+/**
+ * Scroll Reveal - IntersectionObserver based
+ */
+function initScrollReveal() {
+    const selectors = [
+        '.reveal', '.reveal-left', '.reveal-right', '.reveal-scale'
+    ];
+    const elements = document.querySelectorAll(selectors.join(','));
+    if (!elements.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    elements.forEach(el => observer.observe(el));
+}
+
 
 /**
  * Theme Toggler Setup

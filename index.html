@@ -60,7 +60,6 @@
             <!-- Action Area -->
             <div class="header-actions">
                 <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle Theme">
-                    <!-- Sun Icon (Outline) -->
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="sun-icon">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -73,7 +72,13 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <a href="#contact" class="btn btn-outline-nav" id="nav-contact-btn">CONTACT US</a>
+                <a href="#contact" class="btn btn-outline-nav hide-mobile" id="nav-contact-btn">CONTACT US</a>
+                <!-- Hamburger Menu Toggle (mobile only) -->
+                <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
             </div>
         </div>
     </header>
@@ -311,7 +316,7 @@
                 <div class="about-main">
                     
                     <!-- Left Side: Interactive Mockup Dashboard -->
-                    <div class="about-left">
+                    <div class="about-left reveal-left">
                         <div class="mockup-frame">
                             <!-- Background Construction Image -->
                             <img src="/about_construction_site.png" alt="Operations Mockup Background" class="mockup-bg-image">
@@ -463,7 +468,7 @@
                     </div>
                     
                     <!-- Right Side: Content & Counters -->
-                    <div class="about-right">
+                    <div class="about-right reveal-right">
                         <div class="about-subtitle-container">
                             <div class="subtitle-line"></div>
                             <span class="about-subtitle">ABOUT DE PAPAS</span>
@@ -560,7 +565,7 @@
         <!-- Services Section -->
         <section class="services-section" id="services">
             <div class="container">
-                <div class="services-header">
+                <div class="services-header reveal">
                     <div class="services-subtitle-wrap">
                         <div class="subtitle-line"></div>
                         <span class="services-subtitle">WHAT WE OFFER</span>
@@ -574,7 +579,7 @@
                 <!-- Services Grid -->
                 <div class="services-grid-modern">
                     <!-- Card 1: Granite Supply -->
-                    <div class="service-card-modern">
+                    <div class="service-card-modern reveal reveal-delay-1">
                         <div class="service-card-img-wrap">
                             <img src="/service_granite.png" alt="Granite Supply Delivery" class="service-card-img">
                         </div>
@@ -593,7 +598,7 @@
                     </div>
 
                     <!-- Card 2: Sand Supply -->
-                    <div class="service-card-modern">
+                    <div class="service-card-modern reveal reveal-delay-2">
                         <div class="service-card-img-wrap">
                             <img src="/service_sand.png" alt="Sand Supply Delivery" class="service-card-img">
                         </div>
@@ -610,7 +615,7 @@
                     </div>
 
                     <!-- Card 3: Stone Supply -->
-                    <div class="service-card-modern">
+                    <div class="service-card-modern reveal reveal-delay-3">
                         <div class="service-card-img-wrap">
                             <img src="/service_stone.png" alt="Stone Supply Delivery" class="service-card-img">
                         </div>
@@ -631,7 +636,7 @@
                     </div>
 
                     <!-- Card 4: Building Construction (Active/Featured Card) -->
-                    <div class="service-card-modern active">
+                    <div class="service-card-modern active reveal reveal-delay-1">
                         <div class="service-card-img-wrap">
                             <img src="/service_construction.png" alt="Building Construction Work" class="service-card-img">
                         </div>
@@ -654,7 +659,7 @@
                     </div>
 
                     <!-- Card 5: Quality & Quantity Control -->
-                    <div class="service-card-modern">
+                    <div class="service-card-modern reveal reveal-delay-2">
                         <div class="service-card-img-wrap">
                             <img src="/service_quality.png" alt="Quality Control Inspection" class="service-card-img">
                         </div>
@@ -675,7 +680,7 @@
                     </div>
 
                     <!-- Card 6: Site Management -->
-                    <div class="service-card-modern">
+                    <div class="service-card-modern reveal reveal-delay-3">
                         <div class="service-card-img-wrap">
                             <img src="/service_management.png" alt="Site Management Oversight" class="service-card-img">
                         </div>
